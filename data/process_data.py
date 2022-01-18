@@ -49,7 +49,7 @@ def save_data(df, database_filename):
         df -> Input dataframe
         filename -> name of the database file
     """
-    engine = create_engine('sqlite:///{}.db'.format(database_filename))
+    engine = create_engine('sqlite:///{}'.format(database_filename))
     df.to_sql(database_filename, engine, index=False)
 
 def main():
