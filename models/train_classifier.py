@@ -2,6 +2,7 @@ import sys, re, nltk
 from sqlalchemy import create_engine
 import pandas as pd
 from joblib import dump, load
+import numpy as np
 
 from nltk.corpus import stopwords
 from nltk import word_tokenize
@@ -15,6 +16,7 @@ from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import classification_report
 
 nltk.download(['punkt','stopwords','wordnet','averaged_perceptron_tagger'])
 
@@ -94,7 +96,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
     print(classification_report(Y_test, y_pred, target_names=category_names))
 
     # accuracy
-    print("Accuracy: {}".format(np.mean(Y_test.values == y_pred)))
+    print("Accuracy: {}".format(np.mean(Y_test == y_pred)))
 
 
 def save_model(model, model_filepath):
