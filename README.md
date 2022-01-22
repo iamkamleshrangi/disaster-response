@@ -7,8 +7,9 @@
 	1. [Dependencies](#dependencies)
 	2. [File Structure](#file_structure)
 	3. [Installing](#installation)
-        4. [Instructions](#instructions)
-        5. [Deployment!](#production)
+	4. [Instructions](#instructions)
+	5. [Deployment!](#production)
+4. [Screenshots](#screenshots)
 4. [Acknowledgement](#acknowledgement)
 5. [License](#license)
 
@@ -61,10 +62,10 @@ Projects includes
 |- etl_pipeline.ipynb  # Note book of the ELT work
 |- ml_pipeline.ipynb  # Note book of ML work
 
-- sceenshot
-|- 1.jpg
-|- 2.jpg
-|- .3jpg
+- sceenshots
+|- 1.png
+|- 2.png
+|- 3.png
 
 - README.md
 - LICENSE
@@ -108,15 +109,15 @@ development: You can run it based on your requirement.
 
 1. The main page shows some graphs about training dataset
 
-![Main Page](screenshots/1.jpg)
+![Main Page](screenshots/1.png)
 
 2. Input as an example of a message
 
-![Sample Input](screenshots/2.jpg)
+![Sample Input](screenshots/2.png)
 
 3. Click Classify Message, the message will be categorized and the belonging message categories will highlighted in green.
 
-![Sample Prediction](screenshots/3.jpg)
+![Sample Prediction](screenshots/3.png)
 
 
 <a name="acknowledgements"></a>
