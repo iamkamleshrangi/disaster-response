@@ -1,7 +1,7 @@
 # Disaster Response Pipeline Project
 
 ### Table of Contents
-1. [Goal] (#Goal)
+1. [Goal](#goal)
 2. [Description](#description)
 3. [Getting Started](#getting_started)
 	1. [Dependencies](#dependencies)
@@ -50,8 +50,8 @@ Projects includes
 - data
 |- disaster_categories.csv  # data to process 
 |- disaster_messages.csv  # data to process
-|- process_data.py.       # Handle preprocessing of the categories and messages
-|- DisasterResponse.db   # database to save clean data to
+|- process_data.py.       # preprocessing of csv files
+|- DisasterResponse.db   # database to save clean data
 
 - models
 |- train_classifier.py
