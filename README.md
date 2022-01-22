@@ -127,6 +127,6 @@ development: You can run it based on your requirement.
 <a name="license"></a>
 
 ## License
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: GPLv3](https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 
