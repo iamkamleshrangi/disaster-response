@@ -51,18 +51,15 @@ def tokenize(text):
 # load data
 engine = create_engine('sqlite:///../data/DisasterResponse.db')
 df = pd.read_sql_table('data/DisasterResponse.db', engine)
-print(df.head())
+
 # load model
-#model = joblib.load("../models/your_model_name.pkl")
-model = load("classifier.joblib")
+model = load("../models/classifier.joblib")
 
 # index webpage displays cool visuals and receives user input text for model
 @app.route('/')
 @app.route('/index')
 def index():
     genre_counts = df.groupby("genre").count()["message"]
-    print('Names ',genre_counts)
-    print('****'*100)
     genre_names = list(genre_counts.index)
 
     category_counter = df.drop(["id", "message", "original", "genre"], axis=1).sum()
@@ -106,9 +103,7 @@ def index():
     ]
     # encode plotly graphs in JSON
     ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
-    print(ids)
     graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
-    print(graphJSON)
 
     # render web page with plotly graphs
     return render_template('master.html', ids=ids, graphJSON=graphJSON)
