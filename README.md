@@ -1,14 +1,15 @@
 # Disaster Response Pipeline Project
 
 ### Table of Contents
-1. [Goal] (#Goal)
+1. [Goal](#goal)
 2. [Description](#description)
 3. [Getting Started](#getting_started)
 	1. [Dependencies](#dependencies)
 	2. [File Structure](#file_structure)
 	3. [Installing](#installation)
-    4. [Instructions](#instructions)
-    5. [Deployment!](#production)
+	4. [Instructions](#instructions)
+	5. [Deployment!](#production)
+4. [Screenshots](#screenshots)
 4. [Acknowledgement](#acknowledgement)
 5. [License](#license)
 
@@ -50,8 +51,8 @@ Projects includes
 - data
 |- disaster_categories.csv  # data to process 
 |- disaster_messages.csv  # data to process
-|- process_data.py.       # Handle preprocessing of the categories and messages
-|- DisasterResponse.db   # database to save clean data to
+|- process_data.py.       # preprocessing of csv files
+|- DisasterResponse.db   # database to save clean data
 
 - models
 |- train_classifier.py
@@ -61,25 +62,71 @@ Projects includes
 |- etl_pipeline.ipynb  # Note book of the ELT work
 |- ml_pipeline.ipynb  # Note book of ML work
 
-- sceenshot
-|- 1.jpg
-|- 2.jpg
-|- .3jpg
+- sceenshots
+|- 1.png
+|- 2.png
+|- 3.png
 
 - README.md
 - LICENSE
 ```
 
 
-### Instructions:
+<a name="installation"></a>
+### Installing
+* Clone the repository.
+    ```
+    git clone https://github.com/iamkamleshrangi/disaster-response.git
+    ```
+* Proper conda/virtualenv enviroment ready with python3+.
+* Install the necessary libraries provided in requirements.txt file.
+* Follow the instructions provided in the next section.
+
+
+<a name="instructions"></a>
+#### Instructions
+
+Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database
         `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
     - To run ML pipeline that trains classifier and saves
         `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
-
+	
 2. Run the following command in the app's directory to run your web app.
     `python run.py`
 
 3. Go to http://0.0.0.0:3001/
+
+<a name="production"></a>
+#### Deployment
+production: To deploy the project live, you need a cloud service provider like AWS, then run the app.py on the server and access the service with the help of server_public_ip:3001 url, however I suggest to run app on the nginx as server and postgres as database. 
+
+development: You can run it based on your requirement.
+
+### Screenshots!
+
+1. The main page shows some graphs about training dataset
+
+![Main Page](screenshots/1.png)
+
+2. Input as an example of a message
+
+![Sample Input](screenshots/2.png)
+
+3. Click Classify Message, the message will be categorized and the belonging message categories will highlighted in green.
+
+![Sample Prediction](screenshots/3.png)
+
+
+<a name="acknowledgements"></a>
+## Acknowledgements
+* [Udacity](https://www.udacity.com/) for proposing this project as part of the Data Science Nanodegree Program.
+* [Figure Eight](https://www.figure-eight.com/) for providing the data.
+<a name="license"></a>
+
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
